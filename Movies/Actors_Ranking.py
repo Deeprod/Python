@@ -13,7 +13,7 @@ import mysql.connector
 import pandas as pd
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 
-#Option
+#Optionsdd
 rtype = 'cast'
 
 #Fetch data from the SQL Database
