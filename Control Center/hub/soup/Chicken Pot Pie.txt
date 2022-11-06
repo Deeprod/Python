@@ -1,0 +1,77 @@
+{{ref}}
+Chicken_Pot_Pie
+
+{{cat}}
+Recipe
+
+{{hea}}
+Chicken Pot Pie
+
+{{ttl}}Ingredients
+
+{{txt}}
+[ul] 500mL Milk
+[l] 1 cube chicken stock
+[l] 200g Mushrooms
+[l] 2 Carrots
+[l] 1 Celeriac
+[l] 1 Onion (large)
+[l] 2 Garlic cloves
+[l] 1 cup of peas
+[l] 50g Parmesan
+[l] 50g Flour
+[l] 1 Sheet of Puff Pastry
+[l] 1 Egg
+[lu]
+
+{{ttl}}Prep.
+
+{{txt}}
+[b] Prepare Broth [bb]<br>
+Smoosh with a fork a large cube of chicken stock in 250mL of water, then pour the 500mL of milk<br>
+Smoosh with a fork a small cube of chicken stock in 85mL of water
+
+{{txt}}
+[b] Chop Veggies [bb]<br>
+First wash the veggies, then chop them (don't do the other way around to avoid veggies to retain water)
+So, grate onion, carrots, celeriac and mushrooms. Keep the peas in the freezer. Dry the mushroom with a tea towel
+
+{{ttl}}Cooking
+
+{{txt}}
+[b] Cook Chicken [bb]<br>
+[ul]Pot 1: Place the now 750mL [b]broth[bb] in a large saucepan  with [b]thyme[bb], let it cook for 3min in low heat (don't let it boil or the milk will split)
+[l]Pot 1: Add chicken, then place lid and simmer on low heat for 15min (put timer)
+[l]Pot 1: Remove and the chicken and shred it, keep the sauce aside (Don't worry if chicken not fully cooked)
+[lu]
+
+{{txt}}
+[b] Cook Veggies [bb]<br>
+[ul]Pot 2: Melt butter in a large pot on medium high heat
+[l]Pot 2: Add Mushrooms and cook until brown for 8min
+[l]Pot 2: Remove Mushrooms from pan, set it aside
+[l]Pot 2: Add garlic and onion, cook for 4min
+[l]Pot 2: Add carrots, celeriac for 5min
+[l]Pot 2: Add the 85mL of chicken stock, stir and crap the bottom, wait 1.5min
+[l]Pot 2: Add flour, stir for 1min
+[l]Pot 2: Add half of the chicken sauce, stir until flour is incorporated
+[l]Pot 2: Add rest of the sauce with parmesan and pepper, stir
+[l]Pot 2: Add chicken and peas, cook for 3-5min, stir regularly
+[l]Pot 2: Add mushrooms and stir for a few seconds
+[l]Pot 2: Remove from heat
+[l]Pot 2: Let it cool for 30min (heat from the food can flatten pastry)
+[lu]
+
+{{txt}}
+[b] Oven [bb]<br>
+Wait 15min, pre-heat the oven at 180 (It takes 15min for the oven to pre-heat)
+
+{{txt}}
+[b] Chicken Pot Pie [bb]<br>
+[ul]Put the puff pastry sheet on top of the pot, tuck it in
+[l]Brush the pastry with an egg
+[l]Make a cut in the middle
+[l]Put in oven for 40min
+[lu]
+
+{{end}}

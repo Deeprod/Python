@@ -1,0 +1,67 @@
+
+<head>
+<link rel="stylesheet" href="css\style.css">  
+<style>
+
+.task--orange {
+  border-left-color: #fdb44d;
+  grid-column: 4 / span 1;
+  grid-row: 3;
+  background: #fef0db;
+  align-self: start;
+  margin-top: 110px; 
+  color: orange;
+}
+.task--red {
+  border-left-color: #fa607e;
+  grid-column: 2 / span 3;
+  grid-row: 3;
+  background: rgba(253, 197, 208, 0.7);
+  align-self: start;
+  margin-top: 50px; 
+  color: red;
+  box-shadow: 0 10px 14px rgba(71, 134, 255, 0.15);
+  border-radius: 5px;
+}
+.task--red:hover { opacity:0.8;
+}
+
+
+</style>
+</head>
+<body>
+<div class="calendar-container">
+	<div class="calendar-header">
+		<h1>
+		   December
+		</h1>
+		<p>
+			2020
+		</p>
+	</div>
+	<div class="calendar">
+		<span class="day-name">Mon</span>
+		<span class="day-name">Tue</span>
+		<span class="day-name">Wed</span>
+		<span class="day-name">Thu</span>
+		<span class="day-name">Fri</span>
+		<span class="day-name">Sat</span>
+		<span class="day-name">Sun</span><div class="day disabled">30</div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div><div class="day disabled">1</div><div class="day disabled">2</div><div class="day disabled">3</div>		
+		<section class="task task--orange" >
+			<div onmouseover = "hide.style.opacity=1;" onmouseout = "hide.style.opacity=0;">Warning</div>
+			<div class="task__detail hide" id="hide">
+				<h2>Product Checkup 1</h2>
+				<p>15-17th Novemgfhjghjfh jfgh jfghj fghj gfhj gfhj ghfj gfh jer</p>
+			</div>
+		</section>
+		
+		<section class="task task--red">Danger</section>
+		
+
+		
+	</div>
+	
+</div>
+
+
+</body>

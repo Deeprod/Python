@@ -1,0 +1,17 @@
+{{ref}}
+PBF2
+
+{{cat}}
+A. Comedy
+
+{{hea}}
+The Peanut Butter Falcon
+
+{{ttl}}Peanut Butter Falcon
+
+{{txt}}
+The [b] Peanut Butter Falcon [bb] [u]is an[uu] [i]adventure[ii] [[C:\Users\Jonathan\Google Drive\Website\_Website_Test_Doc\soup]] set in the [[world]] of a modern Mark Twain that begins when Zak (22), a young man with Down syndrome, runs away from the nursing home where he lives to chase his dream of becoming a professional wrestler by attending the wrestling school The Salt Water Redneck. Through circumstances beyond their control Tyler (32), a small-time outlaw on the run, becomes Zak's unlikely coach and ally. Together they wind through deltas, elude capture, drink whisky, find God, catch fish, and convince Eleanor (28), a kind nursing home employee with a story of her own, to join them on their journey.
+[ul]dfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfgdfgh sdfg sdfg sdg sdfg sdg sdfg dfg[l]B[l]C[lu]
+{{img}} img\pbf.jpg
+{{tab}} pbf
+{{end}}

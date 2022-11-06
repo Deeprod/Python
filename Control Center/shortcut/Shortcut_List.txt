@@ -1,0 +1,16 @@
+dw,C:\Users\Jonathan\Downloads
+drive,C:\Users\Jonathan\Google Drive
+site,C:\Users\Jonathan\Google Drive\Website
+cv,C:\Users\Jonathan\Google Drive\CV - Resume
+sc,C:\Users\Jonathan\Google Drive\Python\Shortcut
+list,C:\Users\Jonathan\Google Drive\Python\Control Center\shortcut\Shortcut_List.txt
+py,C:\Users\Jonathan\Google Drive\Python
+gmail,https://mail.google.com/mail/?tab=cm#inbox
+reddit,https://www.reddit.com/
+website,http://jox.srb.mybluehost.me/New/app-index.php
+tube,https://www.youtube.com/
+ariba,https://docs.google.com/spreadsheets/d/1O5Ulk5gQwPO6kZgLwydUXZ8F54DOjXL8T_3YzsVu3KQ/edit#gid=1280620170
+hub,C:\Users\Jonathan\Google Drive\Python\Control Center\hub\hub.html
+soup,C:\Users\Jonathan\Google Drive\Python\Control Center\hub\soup
+c,C:\Users\Jonathan\Google Drive\Python\Control Center
+zila,C:\Program Files\FileZilla FTP Client\filezilla.exe
