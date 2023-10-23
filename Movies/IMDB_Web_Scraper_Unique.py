@@ -165,10 +165,10 @@ def oscar_outcome_acr(outc):
     
     
 #Fetch data from the SQL Database
-mydb = mysql.connector.connect(user='u830871656_Deeprod'
+mydb = mysql.connector.connect(user='u830871656_Online'
                               ,password='Deepunder2!'
                               ,host='191.101.230.1'
-                              ,database='u830871656_Deeprod')
+                              ,database='u830871656_Online')
 
 mycursor = mydb.cursor()
 mycursor.execute("SELECT Movies, Search, Year, Rating, ID, Date, Cast FROM Tab_Movies Where LENGTH(Cast) = 0")
@@ -275,7 +275,7 @@ for i in sql_data.index:
     ##########################################################################################
     #Fetch Directors and Writers
     ##########################################################################################
-    movie_info = soup.find_all("li", {"class": "meta-row clearfix"})
+    movie_info = soup.find_all("li", {"class": "info-item"})
 
     print("Movie Info:")
     for mi in movie_info:
@@ -342,13 +342,17 @@ for i in sql_data.index:
     ##########################################################################################
     #Fetch the full cast (firt billed)
     ##########################################################################################
-    full_cast = soup.find_all("span", {"class": "characters subtle smaller"})
+    full_cast = soup.find_all("div", {"class": "metadata"})
     full_cast_trim = []
 
     print("Cast:")
+    
     for fc in full_cast:
-        actor_role = fc.get_text(strip=True)
-        actor_name = fc.attrs.get('title')
+
+        actor_and_role = fc.find_all("p")
+
+        actor_role = actor_and_role[1].get_text(strip=True)
+        actor_name = actor_and_role[0].get_text(strip=True)
 
         if actor_role == "Director":
             break
@@ -363,6 +367,7 @@ for i in sql_data.index:
     ##########################################################################################
     #Fetch the Budget
     ##########################################################################################
+
     #boxoffice_soup = soup.select('div.txt-block')
 
     #budget = "0"
@@ -469,10 +474,10 @@ for i in sql_data.index:
     print(error_oscar_out)
     print('')
 
-    mydb = mysql.connector.connect(user='u830871656_Deeprod'
+    mydb = mysql.connector.connect(user='u830871656_Online'
                                   ,password='Deepunder2!'
                                   ,host='191.101.230.1'
-                                  ,database='u830871656_Deeprod')
+                                  ,database='u830871656_Online')
 
     mycursor = mydb.cursor()
 
