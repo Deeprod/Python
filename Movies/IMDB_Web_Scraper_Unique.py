@@ -184,9 +184,9 @@ index_search = 1
 index_year = 2
 index_rating = 3
 
-for i in sql_data.index:
-    if sql_data['search'][i] == '':
-        sql_data.at[i,'search'] = sql_data['name'][i] + " (" + sql_data['year'][i] + ")"
+# for i in sql_data.index:
+#     if sql_data['search'][i] == '':
+#         sql_data.at[i,'search'] = sql_data['name'][i] #+ " (" + sql_data['year'][i] + ")"
 
 print(sql_data)
 print('')
@@ -197,10 +197,8 @@ print('')
 ##########################################################################################
 # Loop through all the records in the SQL Query
 ##########################################################################################
-imdb_url = 'https://www.imdb.com/'
-imdb_search = 'find?q='
-rotten_url = 'https://www.rottentomatoes.com/'
-rotten_search = 'search?search='
+# imdb_url = 'https://www.imdb.com/'
+# imdb_search = 'find?q='
 
 for i in sql_data.index:
 
@@ -222,49 +220,52 @@ for i in sql_data.index:
     
     print('*********************************************************')
     print('****************************************')
-    print('************** ' + sql_data['search'][i])
+    print('************** ' + sql_data['name'][i])
     print('****')
     print('*')
     
-    movie_name = sql_data['search'][i]
-    search_movie = sql_data['search'][i].replace(' ','+')
+    movie_name = sql_data['name'][i]
+    search_movie = sql_data['search'][i]
 
     ##########################################################################################
     # IMDB URL
     ##########################################################################################
-    url = imdb_url + imdb_search + search_movie
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, "html.parser")
-    links = [a.attrs.get('href') for a in soup.select('td.result_text a')]
+    # url = imdb_url + imdb_search + search_movie
+    # response = requests.get(url)
+    # soup = BeautifulSoup(response.text, "html.parser")
+    # links = [a.attrs.get('href') for a in soup.select('td.result_text a')]
     
-    try:
-        url = imdb_url + links[0]
-        print('IMDB url: ' + url)
-    except:
-        print("No links were found for the search on IMDB: " + url)
-        #Error.append('No links were found for the search on IMDB: ' + url)
+    # try:
+    #     url = imdb_url + links[0]
+    #     print('IMDB url: ' + url)
+    # except:
+    #     print("No links were found for the search on IMDB: " + url)
+    #     #Error.append('No links were found for the search on IMDB: ' + url)
 
 
     ##########################################################################################
     # Rotten Tomatoes URL
     ##########################################################################################
+    rotten_url = 'https://www.rottentomatoes.com/'
+    rotten_search = 'search?search='
 
-    url = rotten_url + rotten_search + search_movie
-    response = requests.get(url)
-    rotten_soup = BeautifulSoup(response.text, "html.parser")
-    rotten_soup_find_type = rotten_soup.find(attrs={'type': 'movie'})
-    rotten_soup_find_class = rotten_soup_find_type.find(attrs={'class': 'unset'})
-    links = rotten_soup_find_class.attrs.get('href')
+    if(search_movie == ''):
+        url = rotten_url + rotten_search + movie_name
+        response = requests.get(url)
+        rotten_soup = BeautifulSoup(response.text, "html.parser")
+        rotten_soup_find_type = rotten_soup.find(attrs={'type': 'movie'})
+        rotten_soup_find_class = rotten_soup_find_type.find(attrs={'class': 'unset'})
+        links = rotten_soup_find_class.attrs.get('href')
 
-    try:
-        url = links
-        print('Rotten Tomatoes url: ' + url)
-    except:
-        print("No links were found for the search on Rotten Tomatoes: " + url)
-        Error.append('No links were found for the search on Rotten Tomatoes: ' + url)
-        continue
-
-    print("")
+        try:
+            url = links
+            print('Rotten Tomatoes url: ' + url)
+        except:
+            print("No links were found for the search on Rotten Tomatoes: " + url)
+            Error.append('No links were found for the search on Rotten Tomatoes: ' + url)
+            continue
+    else:
+        url = search_movie
 
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
@@ -474,6 +475,9 @@ for i in sql_data.index:
     print(error_oscar_out)
     print('')
 
+    keyinput = input("Press Enter to continue...")
+    if keyinput == "exit": break
+    
     mydb = mysql.connector.connect(user='u830871656_Online'
                                   ,password='Deepunder2!'
                                   ,host='191.101.230.1'
@@ -499,24 +503,3 @@ for i in sql_data.index:
     mycursor.execute(sql_query)
 
     mydb.close()
-
-    keyinput = input("Press Enter to continue...")
-    if keyinput == "exit": break
-
-
-
-
-
-        
-    
-
-
-
-
-
-
-
-
-
-
-

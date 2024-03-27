@@ -1,15 +1,16 @@
-#https://bit.ly/2NyxdAG
+#python3 -m pip install beautifulsoup4
 from bs4 import BeautifulSoup
 from statistics import mean
 from collections import Counter
 
+#python3 -m pip install requests
 import requests
 import re
 
-#py -m pip install mysql-connector-python
+#python3 -m pip install mysql-connector-python
 import mysql.connector
 
-#py -m pip install pandas
+#python3 -m pip install pandas
 import pandas as pd
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 
@@ -17,10 +18,10 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 rtype = 'cast'
 
 #Fetch data from the SQL Database
-mydb = mysql.connector.connect(user='u830871656_Deeprod'
+mydb = mysql.connector.connect(user='u830871656_Online'
                               ,password='Deepunder2!'
                               ,host='191.101.230.1'
-                              ,database='u830871656_Deeprod')
+                              ,database='u830871656_Online')
 
 mycursor = mydb.cursor()
 mycursor.execute("""
@@ -75,7 +76,7 @@ for field in sql_field:
         for temp in split_temp:
             if temp != "":
                 temp_list.append(temp)
-                if i <= len(sql_data) - 20:
+                if i <= len(sql_data) - 80:
                     temp_list_m.append(temp)
 
     master_list_w_dup.append(temp_list)
@@ -181,10 +182,10 @@ for i in cast.index:
 
     sql_update_sql = sql_update_sql_header + ", ".join(sql_update_sql_record) + ';'
 
-mydb = mysql.connector.connect(user='u830871656_Deeprod'
+mydb = mysql.connector.connect(user='u830871656_Online'
                               ,password='Deepunder2!'
                               ,host='191.101.230.1'
-                              ,database='u830871656_Deeprod')
+                              ,database='u830871656_Online')
 
 mycursor = mydb.cursor()
 #print(sql_update_sql)
