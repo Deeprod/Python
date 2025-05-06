@@ -41,7 +41,7 @@ mycursor.execute("""
                         Rating > 0
                     ORDER BY
                         ID ASC
-                    LIMIT 500;
+                    LIMIT 9500;
                  """)
 
 myresult = mycursor.fetchall() 
