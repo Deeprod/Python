@@ -1,5 +1,0 @@
-- devlog
-- last modified and by who
-- allow links to have a different label
-- change list 
-- Do the nice "fontawesome" example for left menu?

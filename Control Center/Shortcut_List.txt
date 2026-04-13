@@ -1,0 +1,4 @@
+list,/Users/jonathanventuri/Documents/Python/Control Center/Shortcut_List.txt
+dl,/Users/jonathanventuri/Downloads
+palette,/Users/jonathanventuri/Desktop/Assets/Palette/Palette.png
+shop,/Users/jonathanventuri/Desktop/Shop.xlsb
