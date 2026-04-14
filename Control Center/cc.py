@@ -1,10 +1,8 @@
 import sys
 import subprocess
-sys.path.append("C:\\Users\\Jonathan.Venturi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages")
-
 import os
 from colorama import init
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 init(autoreset=True)
 
 #os.system('mode con: cols=300 lines=600') test
@@ -13,7 +11,6 @@ os.system('cls')
 from cc_shortcut_class import Shortcut
 from cc_clipboard import copy_to_clipboard
 from cc_config import *
-from cc_lpr_pr import *
 from cc_awb import *
 from cc_app import *
 from cc_breakdown_dir import *
@@ -22,7 +19,7 @@ from cc_breakdown_dir import *
 ## Main Loop
 #############################################
 
-print(Fore.YELLOW + sys.version  + Style.RESET_ALL)      
+print(Fore.YELLOW + sys.version + Style.RESET_ALL)      
 print(sys.executable)
 
 while True: 
@@ -39,9 +36,25 @@ while True:
         shortcut = Shortcut(shortcut_input)
            
         if shortcut.text == "stm":
-            full_path = r'C:\temp\github\act-python\Jonathan\Movies'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run streamlit_page.py"',shell=True)
+
+            if sys.platform.startswith("win"):
+                full_path = r"C:\Users\JonathanVenturi\Documents\Python\Movies"
+                cmd = f'cd /d "{full_path}" && py -m streamlit run streamlit_page.py'
+                subprocess.Popen(f'start cmd /K "{cmd}"', shell=True)
+
+            else:
+                full_path = "/Users/jonathanventuri/Documents/Python/Movies"
+                cmd = f'cd "{full_path}" && python3 -m streamlit run streamlit_page.py'
+
+                # Escape quotes for AppleScript
+                cmd_escaped = cmd.replace('"', '\\"')
+
+                subprocess.Popen([
+                    "osascript",
+                    "-e",
+                    f'tell application "Terminal" to do script "{cmd_escaped}"'
+                ])
+
             continue
         
         if shortcut.text == "std":
@@ -49,45 +62,6 @@ while True:
             #Open a new terminal and run a streamlit session
             subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run main.py"',shell=True)
             continue
-        
-        if shortcut.text == "steas":
-            full_path = r'C:\temp\github\act-python\EAS'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run main.py"',shell=True)
-            continue
-        
-        if shortcut.text == "stai":
-            full_path = r'C:\temp\github\act-python\Jonathan\Toolkit Ai'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run main.py"',shell=True)
-            continue
-        
-        if shortcut.text == "stair":
-            full_path = r'C:\temp\github\act-python\Jonathan\Toolkit Ai'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run response.py"',shell=True)
-            continue
-        
-        if shortcut.text == "stair1":
-            full_path = r'C:\temp\github\act-python\Jonathan\Toolkit Ai'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run response_GPT5_v1.py"',shell=True)
-            continue     
-        
-        if shortcut.text == "stair2":
-            full_path = r'C:\temp\github\act-python\Jonathan\Toolkit Ai'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run response_GPT5_v2.py"',shell=True)
-            continue
-        
-        if shortcut.text == "stair3":
-            full_path = r'C:\temp\github\act-python\Jonathan\Toolkit Ai'
-            #Open a new terminal and run a streamlit session
-            subprocess.Popen(f'start cmd /K "cd /d {full_path} && py -m streamlit run response_GPT5_v3.py"',shell=True)
-            continue
-        
-        elif "pr/" in shortcut.text:
-            pr_sc(shortcut.text)
            
         elif "awb/" in shortcut.text or "tools/" in shortcut.text:
             awb_sc(shortcut.text)
